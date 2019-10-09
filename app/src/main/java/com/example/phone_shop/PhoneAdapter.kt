@@ -8,8 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.view_holder_phone.view.*
 import java.util.zip.Inflater
 
-class PhoneAdapter:RecyclerView.Adapter<PhoneViewHolder>(){
-    var phones = arrayListOf<Phone>()
+class PhoneAdapter (val phones: ArrayList<Phone>):RecyclerView.Adapter<PhoneViewHolder>(){
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PhoneViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val itemView       = layoutInflater.inflate(R.layout.view_holder_phone, parent,false)
@@ -24,7 +24,7 @@ class PhoneAdapter:RecyclerView.Adapter<PhoneViewHolder>(){
         val phone = phones[position]
         holder.itemView.txtName.text = phone.name
         holder.itemView.txtPrice.text = "\$ ${phone.price}"
-        holder.itemView.imagePhone.setImageURI(phone.imageUrl)
+
 
     }
 

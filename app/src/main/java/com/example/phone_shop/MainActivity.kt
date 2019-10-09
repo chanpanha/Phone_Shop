@@ -17,6 +17,15 @@ class MainActivity : AppCompatActivity() {
         //Set the layout manager
         recyclerView.layoutManager = LinearLayoutManager(this)
 
+        var phones = ArrayList<Phone>()
+
+            phones.add(Phone(1, "A" , 1200, 21))
+            phones.add(Phone(1, "A" , 1200, 21))
+            phones.add(Phone(1, "A" , 1200, 21))
+            phones.add(Phone(1, "A" , 1200, 21))
+        var adapter = PhoneAdapter(phones)
+            recyclerView.adapter = adapter
+
 
 
 
