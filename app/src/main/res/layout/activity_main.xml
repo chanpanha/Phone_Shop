@@ -29,6 +29,7 @@
             android:layout_gravity="end|center_vertical"
             android:drawableRight="@drawable/ic_arrow_right"
             android:gravity="center_vertical"
+            android:id="@+id/showAllBrand"
             android:text="All" />
 
     </FrameLayout>

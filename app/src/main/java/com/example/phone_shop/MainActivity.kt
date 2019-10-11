@@ -1,5 +1,6 @@
 package com.example.phone_shop
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -27,6 +28,10 @@ class MainActivity : AppCompatActivity() {
             recyclerView.adapter = adapter
 
 
+        showAllBrand.setOnClickListener{
+            val intent = Intent(this , Main2Activity::class.java)
+            startActivity(intent)
+        }
 
 
 
